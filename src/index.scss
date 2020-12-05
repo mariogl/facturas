@@ -31,10 +31,18 @@ a {
   color: #272c33;
   text-decoration: none;
 }
-.contenedor {
-  width: calc(100% - 210px);
-  margin-left: 210px;
+.contenido {  
+  margin-left: 0;
+  width: 100%;
+  transition: all 0.2s;
+  &.desplazado {
+    width: calc(100% - 210px);
+    margin-left: 100%;
+    @media (min-width: 500px) {
+      margin-left: 210px;
+    }
+  }  
 }
-.principal {
+.principal > * {
   padding: 25px 15px;
 }

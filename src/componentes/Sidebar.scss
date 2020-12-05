@@ -4,13 +4,21 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     padding: 15px;
     position: absolute;
-    transition: all .5s;
+    transition: all .2s;
     @media (min-width: 500px) {
         max-width: 210px;
+        left: -210px;
+    }
+    &.on {
+        left: 0;
+        .toggle-sidebar {
+            right: 10px;
+            transform: rotate(0);
+        }
     }
     .nombre-app {
         font-size: 2.4em;
@@ -32,8 +40,13 @@
         cursor: pointer;
         place-items: center;
         position: absolute;
-        right: -25px;
+        right: -50px;
         bottom: 50px;
+        transform: rotate(180deg);
+        transition: right 0.2s, transform 0.2s 0.3s;
+        @media (min-width: 500px) {
+            right: -25px;
+        }
         > * {
             position: relative;
             left: -3px;
@@ -42,7 +55,12 @@
     .paginas {
         list-style: none;
         li {
-            line-height: 40px;
+            line-height: 50px;
+            font-size: 1.2em;
+            @media (min-width: 500px) {
+                line-height: 40px;
+                font-size: 1em;
+            }
         }
     }
     a {

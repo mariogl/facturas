@@ -3,9 +3,10 @@ import { faCaretLeft, faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Sidebar.scss";
 import { NavLink } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = props => {
+    const { abierta, onToggle } = props;
     return (
-        <aside className="sidebar">
+        <aside className={`sidebar${abierta ? ' on' : ''}`}>
             <div className="sidebar-inner">
                 <h1 className="nombre-app">Factureitor</h1>
                 <nav className="menu-principal">
@@ -20,7 +21,7 @@ const Sidebar = () => {
                     </ul>
                     <i className="usuario"><FontAwesomeIcon icon={faUser} /></i>
                 </nav>
-                <i className="toggle-sidebar"><FontAwesomeIcon icon={faCaretLeft} /></i>
+                <i className="toggle-sidebar" onClick={onToggle}><FontAwesomeIcon icon={faCaretLeft} /></i>
             </div>
         </aside>
     )
