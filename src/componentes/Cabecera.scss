@@ -1,0 +1,11 @@
+.cabecera {
+    background-color: #fff;
+    height: 70px;
+    padding: 0 15px;
+    display: grid;
+    place-items: center start;
+    h2 {
+        font-size: 1.7em;
+        font-weight: 400;
+    }
+}
