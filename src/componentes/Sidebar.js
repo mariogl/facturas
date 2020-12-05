@@ -9,7 +9,7 @@ const Sidebar = () => {
             <div className="sidebar-inner">
                 <h1 className="nombre-app">Factureitor</h1>
                 <nav className="menu-principal">
-                    <ul class="paginas">
+                    <ul className="paginas">
                         <li><NavLink activeClassName="activo" to="/inicio" exact>Inicio</NavLink></li>
                         <li><NavLink activeClassName="activo" to="/facturas">Facturas</NavLink></li>
                         <li><NavLink activeClassName="activo" to="/gastos">Gastos</NavLink></li>
@@ -18,7 +18,7 @@ const Sidebar = () => {
                         <li><NavLink activeClassName="activo" to="/categorias">Categorías</NavLink></li>
                         <li><NavLink activeClassName="activo" to="/estadisticas">Estadísticas</NavLink></li>
                     </ul>
-                    <i class="usuario"><FontAwesomeIcon icon={faUser} /></i>
+                    <i className="usuario"><FontAwesomeIcon icon={faUser} /></i>
                 </nav>
                 <i className="toggle-sidebar"><FontAwesomeIcon icon={faCaretLeft} /></i>
             </div>

@@ -1,12 +1,18 @@
+import { connect } from "react-redux";
 import "./Cabecera.scss";
 
 const Cabecera = props => {
     const { tituloPagina } = props;
     return (
-        <header class="cabecera">
+        <header className="cabecera">
             <h2>{tituloPagina}</h2>
         </header>
     )
 }
 
-export default Cabecera;
+const mapStateToProps = state => {
+    const tituloPagina = state.titulo || "";
+    return { tituloPagina };
+}
+
+export default connect(mapStateToProps)(Cabecera);

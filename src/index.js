@@ -4,6 +4,8 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
+import store from "./store/store";
+import { Provider } from 'react-redux';
 
 if (module.hot) {
   module.hot.accept() // already had this init code 
@@ -16,7 +18,9 @@ if (module.hot) {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
